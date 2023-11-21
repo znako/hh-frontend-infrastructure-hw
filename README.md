@@ -1,30 +1,17 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Бандлер
+У меня уже был опыт работы с бандлерами, а именно с webpack, поэтому, следуя совету, я выбрал аналог - Vite. Выбрал его, потому что мне понравилась дока и красивое лого)
+Соответственно использовал встроенный template для react + ts. В принципе, в процессе работы не столкнулся с какими-то серьезными трудностями связанными с бандлером, если были какие-то ошибки, то они быстро гуглились (например, на деплое в github pages при попытке подгрузить js и css файлы, прилетал реджект 404 - нужно было настроить относительные пути).
 
-Currently, two official plugins are available:
+## Линтеры
+Было принято решение пробовать установить hh конфиги. И эта часть наверное заняла больше всего времени, потому что приходилось подбирать версии и решать такие конфликты. Но опять же, трудности были преодолены, где-то советами из гугла, где-то интуицей).
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Прекоммит хуки
+Husky. Классное название, люблю собак. Тут в принципе рассказывать нечего, прочитал доку, подготовил скрипты в package.json, написал хук.
 
-## Expanding the ESLint configuration
+## Неудача
+Yarn PNP. Не знаю, не до конца я смог понять концепции pnp, настроить к сожалению тоже не получилось. Остановился на yarne.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
--   Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-    // other rules...
-    parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        project: ['./tsconfig.json', './tsconfig.node.json'],
-        tsconfigRootDir: __dirname,
-    },
-};
-```
-
--   Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
--   Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
--   Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Last words
+ДЗ понравилась. В принципе тема для меня интересная, не скажу, что легкая, но интересная и важная. Честно говоря, хотелось бы еще одной лекции по бандлеру, условному webpack, c разбором что да как. 
